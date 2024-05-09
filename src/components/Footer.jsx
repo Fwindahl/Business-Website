@@ -48,18 +48,23 @@ const Footer = () => (
         Copyright Ⓒ 2022 HooBank. All Rights Reserved.
       </p>
 
-      <div className="flex flex-row mt-6 md:mt-0">
-        {socialMedia.map((social, index) => (
-          <img
-            key={social.id}
-            src={social.icon}
-            alt={social.id}
-            className={`w-[21px] h-[21px] object-contain cursor-pointer ${
-              index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
-            }`}
-            onClick={() => window.open(social.link)}
-          />
-        ))}
+      <div className="flex flex-col items-center mt-6 md:mt-0">
+        <span className="font-semibold text-gradient">
+          Made by Filip Windahl
+        </span>
+        <div className="flex flex-row mt-2 md:mt0">
+          {socialMedia.map((social, index) => (
+            <img
+              key={social.id}
+              src={social.icon}
+              alt={social.id}
+              className={`w-[21px] h-[21px] object-contain cursor-pointer ${
+                index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
+              }`}
+              onClick={() => window.open(social.link)}
+            />
+          ))}
+        </div>
       </div>
     </div>
   </section>
