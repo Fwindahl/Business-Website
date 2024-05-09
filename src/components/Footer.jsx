@@ -49,8 +49,9 @@ const Footer = () => (
       </p>
 
       <div className="flex flex-col items-center mt-6 md:mt-0">
-        <span className="font-semibold  text-gradient">
-          Made by Filip Windahl <img className="" src={arrowUp} alt="" />
+        <span className="flex flex-col items-end font-semibold text-gradient">
+          Made by Filip Windahl{" "}
+          <img className="rotate-180 " src={arrowUp} alt="" />
         </span>
         <div className="flex flex-row mt-2 md:mt0">
           {socialMedia.map((social, index) => (
