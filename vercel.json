@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/components/(.*)",
-      "destination": "/components/$1"
-    }
-  ]
-}
