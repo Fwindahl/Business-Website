@@ -1,7 +1,7 @@
 import React from "react";
 
 const CardDeal = () => {
-  return <div></div>;
+  return <div>CardDeal</div>;
 };
 
 export default CardDeal;
