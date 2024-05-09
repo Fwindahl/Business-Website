@@ -1,43 +1,43 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import styles from "./style";
-import * as Components from "./components";
-
-const LazyComponents = {};
-Object.keys(Components).forEach((key) => {
-  LazyComponents[key] = lazy(() => import(`./components/${key}`));
-});
+import {
+  Billing,
+  Business,
+  CardDeal,
+  Clients,
+  CTA,
+  Footer,
+  Navbar,
+  Stats,
+  Testimonials,
+  Hero,
+} from "./components";
 
 const App = () => (
   <>
     <div className="w-full overflow-hidden bg-primary">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          <Suspense fallback={<div>Loading Navbar...</div>}>
-            <LazyComponents.Navbar />
-          </Suspense>
+          <Navbar />
         </div>
       </div>
 
       <div className={`bg-primary ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          <Suspense fallback={<div>Loading Hero...</div>}>
-            <LazyComponents.Hero />
-          </Suspense>
+          <Hero />
         </div>
       </div>
 
       <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          <Suspense fallback={<div>Loading content...</div>}>
-            <LazyComponents.Stats />
-            <LazyComponents.Business />
-            <LazyComponents.Billing />
-            <LazyComponents.CardDeal />
-            <LazyComponents.Testimonials />
-            <LazyComponents.Clients />
-            <LazyComponents.CTA />
-            <LazyComponents.Footer />
-          </Suspense>
+          <Stats />
+          <Business />
+          <Billing />
+          <CardDeal />
+          <Testimonials />
+          <Clients />
+          <CTA />
+          <Footer />
         </div>
       </div>
     </div>
