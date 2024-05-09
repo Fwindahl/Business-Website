@@ -2,11 +2,20 @@ import React from "react";
 
 import { stats } from "../constants";
 import styles from "../style";
+import { motion } from "framer-motion";
+import { fadeInAnimationVariants } from "../constants/animations";
 
 const Stats = () => (
   <section className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mb-6`}>
-    {stats.map((stat) => (
-      <div
+    {stats.map((stat, index) => (
+      <motion.div
+        variants={fadeInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        custom={index}
         key={stat.id}
         className={`flex-1 flex justify-start items-center flex-row m-3`}
       >
@@ -16,7 +25,7 @@ const Stats = () => (
         <p className="font-poppins font-normal xs:text-[20.45px] text-[15.45px] xs:leading-[26.58px] leading-[21.58px] text-gradient uppercase ml-3">
           {stat.title}
         </p>
-      </div>
+      </motion.div>
     ))}
   </section>
 );

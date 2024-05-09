@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../style";
-import { logo } from "../assets";
+import { logo, arrowUp } from "../assets";
 import { footerLinks, socialMedia } from "../constants";
 
 const Footer = () => (
@@ -49,8 +49,8 @@ const Footer = () => (
       </p>
 
       <div className="flex flex-col items-center mt-6 md:mt-0">
-        <span className="font-semibold text-gradient">
-          Made by Filip Windahl
+        <span className="font-semibold  text-gradient">
+          Made by Filip Windahl <img className="" src={arrowUp} alt="" />
         </span>
         <div className="flex flex-row mt-2 md:mt0">
           {socialMedia.map((social, index) => (

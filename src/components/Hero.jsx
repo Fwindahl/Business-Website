@@ -2,14 +2,25 @@ import styles from "../style";
 import { discount, robot } from "../assets";
 import GetStarted from "./GetStarted";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
+  const spring = {
+    type: "spring",
+    damping: 20,
+    stiffness: 60,
+    // delay: 1,
+  };
   return (
     <section
       id="home"
       className={`flex md:flex-row flex-col ${styles.paddingY}`}
     >
-      <div
+      <motion.div
+        initial={{ opacity: 0, x: -350 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ y: 50, opacity: 0 }}
+        transition={spring}
         className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
       >
         <div className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2">
@@ -38,12 +49,15 @@ const Hero = () => {
           most likely to fit your needs. We examine annual percentage rates,
           annual fees.
         </p>
-      </div>
+      </motion.div>
 
       <div
         className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
       >
-        <img
+        <motion.img
+          initial={{ opacity: 0, x: 1350 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={spring}
           src={robot}
           alt="billing"
           className="w-[100%] h-[100%] relative z-[5]"

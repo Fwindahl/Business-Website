@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./style";
 import {
   Billing,
@@ -14,32 +14,34 @@ import {
 } from "./components";
 
 const App = () => (
-  <div className="w-full overflow-hidden bg-primary">
-    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Navbar />
+  <>
+    <div className="w-full overflow-hidden bg-primary">
+      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Navbar />
+        </div>
       </div>
-    </div>
 
-    <div className={`bg-primary ${styles.flexStart}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Hero />
+      <div className={`bg-primary ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Hero />
+        </div>
       </div>
-    </div>
 
-    <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Stats />
-        <Business />
-        <Billing />
-        <CardDeal />
-        <Testimonials />
-        <Clients />
-        <CTA />
-        <Footer />
+      <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Stats />
+          <Business />
+          <Billing />
+          <CardDeal />
+          <Testimonials />
+          <Clients />
+          <CTA />
+          <Footer />
+        </div>
       </div>
     </div>
-  </div>
+  </>
 );
 
 export default App;
