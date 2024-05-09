@@ -9,7 +9,7 @@ const GetStarted = () => {
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 0.9 }}
       transition={{ type: "spring", stiffness: 200, damping: 14 }}
-      className={`${styles.flexCenter} w-[140px] h-[140px] hover:drop-shadow-3xl transition-shadow rounded-full bg-blue-gradient p-[2px] cursor-pointer `}
+      className={`${styles.flexCenter} select-none  w-[140px] h-[140px] hover:drop-shadow-3xl transition-shadow rounded-full bg-blue-gradient p-[2px] cursor-pointer `}
     >
       <div
         className={`${styles.flexCenter} flex-col bg-primary w-full h-full rounded-full`}
