@@ -14,7 +14,7 @@ const GetStarted = () => {
       <div
         className={`${styles.flexCenter} flex-col bg-primary w-full h-full rounded-full`}
       >
-        <div className={`${styles.flexStart} flex-row`}>
+        <div className={`${styles.flexStart} active:drop-shadow-3xl flex-row`}>
           <p className="font-poppins mr-[2px] font-medium text-[18px] leading-[23px]">
             <span className="text-gradient">Get</span>
           </p>

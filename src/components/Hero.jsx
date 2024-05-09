@@ -9,7 +9,6 @@ const Hero = () => {
     type: "spring",
     damping: 20,
     stiffness: 60,
-    // delay: 1,
   };
   return (
     <section
@@ -55,6 +54,7 @@ const Hero = () => {
         className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
       >
         <motion.img
+          loading="lazy"
           initial={{ opacity: 0, x: 1350 }}
           animate={{ opacity: 1, x: 0 }}
           transition={spring}
