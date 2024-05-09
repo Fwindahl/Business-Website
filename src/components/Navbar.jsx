@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 
 import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
@@ -7,6 +7,12 @@ import { fadeInAnimationNav } from "../constants/animations";
 
 const Navbar = () => {
   const [toogle, setToogle] = useState(false);
+  const buttonHoverStyle = {
+    hover: {
+      color: "#00f6ff",
+      scale: 1.15,
+    },
+  };
   return (
     <nav className="flex items-center justify-between w-full py-6 navbar">
       <img src={logo} alt="hoobank" className="w-[124px] h-[32px]" />
@@ -22,11 +28,14 @@ const Navbar = () => {
             }}
             custom={index}
           >
-            <li
-              className={`font-poppins font-normal cursor-pointer text-[16px] text-white`}
+            <motion.li
+              whileHover="hover"
+              whileTap={{ scale: 0.9 }}
+              variants={buttonHoverStyle}
+              className={`font-poppins font-normal cursor-pointer text-[16px] text-white `}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
-            </li>
+            </motion.li>
           </motion.div>
         ))}
       </ul>
